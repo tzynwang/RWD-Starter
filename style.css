@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Lato", "Noto Sans TC", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+/* Header */
+
+header {
+  height: 60px;
+  color: #666666;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  display: none;
+}
+
+nav {
+  height: 100%;
+  padding: 0 20px;
+}
+
+.nav-title {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #999999;
+}
+
+/* Main */
+
+main {
+  padding: 40px 24px;
+  background-color: #f6f7f8;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 24px 0 8px;
+}
+
+h3 {
+  font-size: 21px;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+p {
+  color: #666666;
+}
+
+/* Personal Info */
+
+.personal-info {
+  text-align: center;
+  /* 內容置中 */
+}
+
+.avatar-img {
+  border-radius: 25px;
+  /* 圓框效果 */
+}
+
+.name {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  /* 內容置中 */
+  letter-spacing: 2px;
+  /* 字元間距 */
+  color: #ff6600;
+  line-height: 1.5rem;
+}
+
+.text-dark {
+  color: #c43300;
+}
+
+.social-media {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-media-link ,.print {
+  color: #999999;
+  text-decoration: none;
+  /* 沒有底線 */
+  margin: 0 5px;
+}
+
+.social-media-link i, .print i {
+  transition: 0.3s;
+  font-size: 24px;
+}
+
+.social-media-link i:hover, .print i:hover {
+  /* 滑鼠移過時啟用這組設定 */
+  color: #ff6600;
+}
+
+.print {
+  display: none;
+}
+
+.description {
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+/* Skill Section */
+
+.skill-name {
+  border-top: 1px solid #999999;
+  padding-top: 16px;
+}
+
+/* Experience Section */
+
+hr {
+  border: 0px;
+  height: 1px;
+  background: #cccccc;
+  margin: 20px 0;
+}
+
+.place-and-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.company, .duration {
+  color: #666666;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.experience-item i {
+  margin-right: 5px;
+}
+
+.experience-section p {
+  margin: 8px 0px 16px;
+}
+
+/* dark mode */
+#darkMode {
+  position: absolute;
+  top: -36px;
+  left: -36px;
+}
+
+#darkModeLabel {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  right: 0px;
+  bottom: 36px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+#darkModeLabel svg {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+#darkMode:checked ~ #darkModeLabel {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+}
+
+#darkMode:checked ~ #darkModeLabel svg path {
+  d: path("M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z");
+}
+
+#darkMode:checked ~ #darkModeLabel ~ main, 
+#darkMode:checked ~ #darkModeLabel ~ main section * {
+  filter: invert(1);
+}
+
+#darkMode:checked ~ #darkModeLabel ~ main .name {
+  color: #ccc;
+}
+
+#darkMode:checked ~ #darkModeLabel ~ main section img {
+  filter: invert(0);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (min-width: 568px) {
+  main {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .personal-info {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff9e5;
+    box-shadow: 0px 2px 2px 2px #eee;
+    padding: 0px;
+  }
+
+  .personal-info .max-container {
+    display: flex;
+    height: 100%;
+  }
+
+  .personal-info-left, .personal-info-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .personal-info-right {
+    padding: 24px;
+  }
+
+  .avatar {
+    margin-top: 16px;
+  }
+
+  .name {
+    font-size: 24px;
+    margin: 8px 0px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .social-media {
+    width: 100%;
+  }
+
+  section {
+    margin-bottom: 0px;
+    padding: 0px 24px 24px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (min-height: 736px) {
+  .personal-info {
+    height: 45vh;
+    padding-bottom: 24px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 0px 36px 24px;
+  }
+
+  .place-and-time {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .place-and-time span {
+    margin-right: 16px;
+  }
+
+  #darkModeLabel {
+    bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .max-container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .avatar {
+    margin-top: 36px;
+  }
+  
+  .social-media {
+    width: 80%;
+  }
+
+  .print {
+    display: block;
+  }
+
+  #darkModeLabel {
+    width: 48px;
+    height: 60px;
+    top: 0px;
+    right: 20%;
+  }
+}
+
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+  .personal-info {
+    height: 30vh;
+  }
+
+  .max-container {
+    max-width: 1280px;
+  }
+
+  #darkModeLabel {
+    right: 35%;
+  }
+}
